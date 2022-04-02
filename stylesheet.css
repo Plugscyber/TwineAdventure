@@ -1,0 +1,8 @@
+tw-sidebar {
+  display:none; /* Hide the undo and redo buttons and built in side bar */
+}
+/*makes that hr to seperate the inventory and stats from the main passage easily visible.*/
+hr{
+border: 3px solid white;
+  margin-top:5px;
+}
