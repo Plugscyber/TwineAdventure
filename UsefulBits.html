@@ -6,7 +6,8 @@
 <!--add health-->
 (set:$health to $health +5)
 
-<!--for this to work you need a passage called Death. You could link this back to the start of your game to give players another chance.-->
+<!--for this to work you need a passage called Death. You could link this back to the start of your game to give players another chance.
+Do not put this in the footer passage, it seems tempting to make sure you don't have to add it to every passage, but Twine won't like that.-->
 (if: $health is <=1)[(go-to: "Death")]
  
 <!--add to inv. use commas to add more than one item-->
