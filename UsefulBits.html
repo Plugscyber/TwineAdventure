@@ -1,0 +1,33 @@
+<!--These are bits of useful code for your game. -->
+
+<!--remove health-->
+(set:$health to $health -5)
+
+<!--add health-->
+(set:$health to $health +5)
+
+<!--for this to work you need a passage called Death. You could link this back to the start of your game to give players another chance.-->
+(if: $health is <=1)[(go-to: "Death")]
+ 
+<!--add to inv. use commas to add more than one item-->
+(set: $inv to $inv + (a: "Item1", "Item2")) 
+
+<!--take from inv-->
+(set: $inv to $inv - (a: "Item1")) 
+
+<!--add to quest-->
+(set: $quest to $quest+ (a: "Quest1")) 
+
+<!--take from quest-->
+(set: $quest to $quest- (a: "Quest1")) 
+
+<!--class dependent passages can be done!-->
+(if: $class is "Mage")[do x]
+(else:)[do y]
+
+<!--you can give items depending on class too!-->
+Your Grandma gives you something to use on your adventure!
+
+(if: $class is "Mage")[(set: $inv to $inv + (a: "Spellbook")) (set: $gold to 10) She hands you a small ''spellbook'' and some gold coins..]
+(if: $class is "Warrior")[(set: $inv to $inv + (a: "Sword")) (set: $gold to 10)She hands you a ''sword'' and some gold coins.. ]
+(if: $class is "Rouge")[(set: $inv to $inv + (a: "Slingshot"))(set: $gold to 10) She hands you your ''slingshot'' and some gold coins.]
