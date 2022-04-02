@@ -9,8 +9,14 @@
 
 Pick your class
 
-A Mage(click:"Mage")[(set: $class to "Mage")(go-to:"Start Adventure")]
+<h2>Mage</h2>
+[A Mage?]<1a|
+You will command powerful magic, but are less physically strong. (click: ?1a)[(set: $class to "Mage")(go-to:"Start Adventure")]
 
-A Warrior (click:"Warrior")[(set: $class to "Warrior")(go-to:"Start Adventure")]
+<h2>Warrior</h2>
+[A Warrior?]<1b| 
+You will be physically strong but unable to use magic. (click: ?1b)[(set: $class to "Warrior")(go-to:"Start Adventure")]
 
-A Rouge (click:"Rouge")[(set: $class to "Rouge")(go-to:"Start Adventure")]
+<h2>Rouge</h2>
+[A Rouge?]<1c|
+You will be able to do some magic and have moderate strength. (click: ?1c)[(set: $class to "Rouge")(go-to:"Start Adventure")]
