@@ -5,12 +5,16 @@ As well as the hr element that seperates them from the main passage.-->
 {(if: (passage:)'s tags contains "donotshowstats")[<!--Do nothing-->]
 (else:)[
 ''Health: ''(print: '<progress value="' + (text: $health) + '" max="100"></progress>')
+<br>
 ''Magic: ''(print: '<meter value="' + (text: $magic) + '" min="0" max="100"></meter>')
 <br>
+<!--reminds player of their character class-->
 ''Class:'' $class
 <br>
+<!--tells player where they are-->
 ''Location:'' $area]}
 <br>
+<!--code for inventory and quest page links-->
 {(if: (passage:)'s name is "inventory")[<!--Do nothing-->]
 (else-if: (passage:)'s tags contains "donotshowinventory")[<!--Do nothing-->]
  (else:)[''Check [[inventory]].'']}
