@@ -18,12 +18,15 @@ Location information
 
 Charater classes (with class dependent narrative and item acquisition.)
 
+Buying system
+
 
 In development:
 
+Selling system.
 
-Money system with buying and selling. (Mostly what to do when you run out of money and selling items.)
+Cosumable items that restore health or magic.
 
-Magic system (mostly what to do when you run out of magic and try to cast a spell.)
+Magic system (mostly what to do when you run out of magic and try to cast a spell. Think this will be easy to impliment.)
 
 
