@@ -1,7 +1,7 @@
 <!--with the inventory system, you must be careful of adding items more than once. These examples show ways to add items avoding that.
 They also show how to add class specfic items.-->
 
-Example 1: simple way to add items to avoid duplication. You can change the passage text or leave it the same depending on what works best for your story.
+<!--Example 1: simple way to add items to avoid duplication. You can change the passage text or leave it the same depending on what works best for your story.-->
 
 <h1>Ruby</h1>
 (if: $inv contains "Ruby")[You are in a dark room lit with torches. The chest you opened is empty.
@@ -10,11 +10,9 @@ Example 1: simple way to add items to avoid duplication. You can change the pass
 
 (else:)[(set: $inv to $inv + (a: "Ruby"))
 You are in a dark room lit with torches. Inside a chest you find a ruby!
-
-[[what's behind the door?->observation rooms corridor]]]
   
 
-Example 2: Class dependent items.
+<!--Example 2: Class dependent items.-->
 <h1>Grandma</h1>
 
 (if: $inv's length < 1)[
@@ -25,7 +23,26 @@ Your Grandma gives you something to use on your adventure!
 (if: $class is "Rouge")[(set: $inv to $inv + (a: "Slingshot"))(set: $gold to 10) She hands you your ''slingshot'' and some gold coins.]]
 
 (else:)[Your Grandma has given you something to use on your adventure! As you saw when you checked your inventory]
+                        
 
-[[Go on your quest!->Quest]]
+<!--Example 3: searching a room by clicking named hooks.-->
   
-Example 3: Class dependent items.
+<h1>Search the room</h1>
+
+[''Check the chest?'']<1a|
+
+[''Check the bookcase'']<1b|
+
+[''Check the weapons rack?'']<1c|
+<br>
+(if: $inv contains "ruby")[You've searched the chest.]
+(else:)[(click:?1a)[(set: $inv to $inv + (a: "ruby")) You find a ruby in the chest!]]
+
+(if: $inv contains "bestiary")[You've searched the bookcase]
+(else:)[(click:?1b)[(set: $inv to $inv + (a: "bestiary"))You find a book on the monsters of this land.]]
+
+(if: $inv contains "sword" and "shield")[You've searched the weapons rack]
+(else:)[(click:?1c)[(set: $inv to $inv + (a: "sword","shield")) You find a good sword and shield.]]
+
+
+
