@@ -16,13 +16,13 @@ Quest system
 
 Location information
 
-Charater classes (with class dependent narrative.)
+Charater classes (with class dependent narrative and item acquisition.)
 
 
 In development:
 
 
-Money system with buying and selling.
+Money system with buying and selling. (Mostly what to do when you run out of money and selling items.)
 
 Magic system (mostly what to do when you run out of magic and try to cast a spell.)
 
