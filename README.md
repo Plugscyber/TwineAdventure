@@ -25,6 +25,8 @@ In development:
 
 Selling system.
 
+Making sure gold can't go below 0
+
 Cosumable items that restore health or magic.
 
 Magic system (mostly what to do when you run out of magic and try to cast a spell. Think this will be easy to impliment.)
