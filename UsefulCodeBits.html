@@ -31,3 +31,11 @@ Do not put this in the footer passage, it seems tempting to make sure you don't 
 <!--class dependent passages can also be done! check examples for more complex uses.-->
 (if: $class is "Mage")[You recgonise the runes as telling you to go left.]
 (else:)[You do not understand the runes.]
+
+<!--You can just use the if marco for each class to customise your character class responce to events like so.-->
+
+The dragon snoozes, their hoard of books under them.
+(if: $class is "Warrior")[You want to fight them!]
+(if: $class is "Mage")[You want to read the books]
+(if: $class is "Rouge")[You want to sneak around them]
+[[The dragon wakes->Oh no]]
