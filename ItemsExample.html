@@ -23,9 +23,8 @@ Your Grandma gives you something to use on your adventure!
 (if: $class is "Rouge")[(set: $inv to $inv + (a: "Slingshot"))(set: $gold to 10) She hands you your ''slingshot'' and some gold coins.]]
 
 (else:)[Your Grandma has given you something to use on your adventure! As you saw when you checked your inventory]
-                        
 
-<!--Example 3: searching a room by clicking named hooks.-->
+<!--Example 3: searching a room by clicking named hooks-->
   
 <h1>Search the room</h1>
 
@@ -44,5 +43,11 @@ Your Grandma gives you something to use on your adventure!
 (if: $inv contains "sword" and "shield")[You've searched the weapons rack]
 (else:)[(click:?1c)[(set: $inv to $inv + (a: "sword","shield")) You find a good sword and shield.]]
 
-
+<!--Example 4:Removing items-->
+<!--Removing items is a little easier than adding them. -->
+<h1>Dropped it</h1>
+(if: $inv contains "sword")[
+(set: $inv to $inv - (a: "sword")) 
+Oh no you dropped your sword!]
+(else:)[You stumble but don't loose anything.]
 
