@@ -7,6 +7,7 @@ Feel free to use and modify but please credit me and link back to this Github pa
 
 Working:
 
+
 Health system
 
 Inventory system
@@ -19,6 +20,7 @@ Charater classes (with class dependent narrative.)
 
 
 In development:
+
 
 Money system with buying and selling.
 
