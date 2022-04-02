@@ -22,6 +22,12 @@ Do not put this in the footer passage, it seems tempting to make sure you don't 
 <!--take from quest-->
 (set: $quest to $quest- (a: "Quest1")) 
 
+<!--add to gold-->
+(set: $gold to $gold + 5)
+
+<!--take from gold-->
+(set: $gold to $gold - 5)
+
 <!--class dependent passages can be done!-->
 (if: $class is "Mage")[do x]
 (else:)[do y]
