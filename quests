@@ -1,0 +1,8 @@
+#donotshowinventory #donotshowquest
+<h2>Quests</h2>
+Click the name of a mission for information.
+{(if: $mission's length > 0)[Your quests are (joined:", ",...$mission).]
+(else:)[You have no missions.]}
+{(click: "Quest1")[(display: "Quest1")]}
+{(click: "Quest2")[(display: "Quest2")]}
+{[(link-goto: "Return", (history:)'s last)]}
