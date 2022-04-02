@@ -4,3 +4,24 @@ There are also example passages showing how best to use this code, or just fun t
 
 
 Feel free to use and modify but please credit me and link back to this Github page!
+
+Working:
+
+Health system
+
+Inventory system
+
+Quest system
+
+Location information
+
+Charater classes (with class dependent narrative.)
+
+
+In development:
+
+Money system with buying and selling.
+
+Magic system (mostly what to do when you run out of magic and try to cast a spell.)
+
+
