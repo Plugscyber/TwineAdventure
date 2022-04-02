@@ -1,30 +1,31 @@
-<h1>Shop test</h1>
+<h1>Shop</h1>
 <!--as the gold number updates statically to get it to update viusally you must send the player to a new passage. 
-It also lets you tell the player they don't have enough gold.-->
+This system allows for duplicate item purchase, but if you use some of the code in ItemsExample.html you can make items only be brought once.
+This system also stops the player buying things if they lack the gold.-->
 
-"Hello, here is the menu," Says the fish and chip shop owner.
+"Hello, here is what I sell," Says the shop owner.
 
-Cone of chips: 1 gold(click:"Cone of chips")[(go-to:"Cone of chips")]
+A potion of health: 5 gold(click:"potion of health")[(go-to:"potion of health")]
 
-Small fish and chips: 3 gold(click:"Small fish and chips")[(go-to:"Small fish and chips")]
+A crystal ball: 10 gold(click:"crystal ball")[(go-to:"crystal ball")]
 
-Large fish and chips: 5 gold(click:"Large fish and chips")[(go-to:"Large fish and chips")]
+A lockpick: 3 gold(click:"lockpick")[(go-to:"lockpick")]
 
 [[Go to town?->town]]
 
 <!--Put this text into another passage titled the same as the goto. You can design the other passages with the same code,
 just change the values.-->
-<h1>Large fish and chips</h1>
-(if: $gold is >=5)[(set: $gold to $gold - 5)(set: $inv to $inv + (a: "Large fish and chips")) 
-"Here you go!" He says and hands you the large fish and chips.
+<h1>potion of health</h1>
+(if: $gold is >=5)[(set: $gold to $gold - 5)(set: $inv to $inv + (a: "potion of health")) 
+"Here you go!" He says and hands you the potion of health.
 
-[[buy more->fish and chips]]
+[[buy more->shop]
 
 [[Go to the town?->town]]]
-
+<!--this makes you unable to buy the item if you lack the money-->
 (else:)[
 "You don't have enough money." He says.
 
-[[buy more->fish and chips]]
+[[buy more->shop]]
 
 [[Go to the town?->town]]]
