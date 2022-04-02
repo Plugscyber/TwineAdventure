@@ -3,4 +3,4 @@ A repository of Twine code for a fantasy adventure game. Inculdes an inventory s
 There are also example passages showing how best to use this code, or just fun things you could use for a Harlow Twine game that work with this system.
 
 
-Feel free to use but please credit me and link back to this Github page!
+Feel free to use and modify but please credit me and link back to this Github page!
