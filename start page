@@ -5,7 +5,7 @@
 (set: $magic to 100)
 (set: $class to "Uknown")
 (set:$area to "Uknown")}
-<h1>Sart</h1>
+<h1>Start</h1>
 
 Pick your class
 
