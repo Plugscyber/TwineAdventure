@@ -1,10 +1,13 @@
-<!--use these passage tags here to stop the user getting stuck in a loop. 
-Without the hashtag of course.
-#donotshowinventory #donotshowquest-->
+<!--make sure to add these two tags to the passage. Otherwise the player will be stuck in an inventory quest passage loop.
+donotshowinventory and donotshowquest
+-->
 <h2>Quests</h2>
 Click the name of a quest for information.
 {(if: $quest's length > 0)[Your quests are (joined:", ",...$quest).]
 (else:)[You have no quests.]}
+
+<!--Here you can add details of quests that appear on click. Make sure you have a passage with the same name as the display value to pull text from.
+-->
 {(click: "Quest1")[(display: "Quest1")]}
 {(click: "Quest2")[(display: "Quest2")]}
 {[(link-goto: "Return", (history:)'s last)]}
