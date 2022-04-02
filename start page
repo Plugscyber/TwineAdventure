@@ -2,6 +2,7 @@
 (set: $inv to (a:))
 (set: $quest to (a:))
 (set: $health to 100)
+(set: $magic to 100)
 (set: $class to "Uknown")
 (set:$area to "Uknown")}
 <h1>Sart</h1>
