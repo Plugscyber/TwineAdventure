@@ -1,0 +1,15 @@
+{<!-- it is always a good idea to initialize your variables, but with arrays it is particularly important -->
+(set: $inv to (a:))
+(set: $quest to (a:))
+(set: $health to 100)
+(set: $class to "Uknown")
+(set:$area to "Uknown")}
+<h1>Sart</h1>
+
+Pick your class
+
+A Mage(click:"leader")[(set: $class to "Mage")(go-to:"Start Adventure")]
+
+A Warrior (click:"warrior")[(set: $class to "Warrior")(go-to:"Start Adventure")]
+
+A Rouge (click:"scout")[(set: $class to "Rouge")(go-to:"Start Adventure")]
