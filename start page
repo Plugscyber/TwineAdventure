@@ -9,8 +9,8 @@
 
 Pick your class
 
-A Mage(click:"leader")[(set: $class to "Mage")(go-to:"Start Adventure")]
+A Mage(click:"Mage")[(set: $class to "Mage")(go-to:"Start Adventure")]
 
-A Warrior (click:"warrior")[(set: $class to "Warrior")(go-to:"Start Adventure")]
+A Warrior (click:"Warrior")[(set: $class to "Warrior")(go-to:"Start Adventure")]
 
-A Rouge (click:"scout")[(set: $class to "Rouge")(go-to:"Start Adventure")]
+A Rouge (click:"Rouge")[(set: $class to "Rouge")(go-to:"Start Adventure")]
