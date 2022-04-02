@@ -1,7 +1,7 @@
 #donotshowinventory #donotshowquest
 <h2>Quests</h2>
 Click the name of a quest for information.
-{(if: $mission's length > 0)[Your quests are (joined:", ",...$mission).]
+{(if: $quest's length > 0)[Your quests are (joined:", ",...$quest).]
 (else:)[You have no quests.]}
 {(click: "Quest1")[(display: "Quest1")]}
 {(click: "Quest2")[(display: "Quest2")]}
