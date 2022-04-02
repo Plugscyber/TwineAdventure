@@ -1,0 +1,15 @@
+<h1>Search the cave</h1>
+The cave is dark but we're not doing lighting if/else right now.
+You want treasure do you...
+
+[Check the rusty chest?]<1a|
+
+[Check the shiny new chest?]<1b|
+
+<!--If you want to injure the player, health bars are static so to make the bar update, you have to send the player to a new passage. Remember to add the health removing code there!-->
+(click:?1a)[(goto: "Ow!")]
+
+<!--as the player will go to a new passage if they click on 'inventory' to check it, you don't need to send them to a new passage for this.-->
+(click:?1b)[(set: $inv to $inv + (a: "ruby","apple")) There's only a shining ruby and a fresh red apple in here. Weird.]
+
+[[Now you go to the town->town]]
