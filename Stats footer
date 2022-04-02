@@ -3,8 +3,7 @@
 {(if: (passage:)'s tags contains "donotshowstats")[<!--Do nothing-->]
 (else:)[
 ''Health: ''(print: '<progress value="' + (text: $health) + '" max="100"></progress>')
-<br>
-''Name:'' $name
+''Magic: ''(print: '<meter value="' + (text: $magic) + '" min="0" max="100"></meter>')
 <br>
 ''Class:'' $class
 <br>
