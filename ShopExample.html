@@ -1,0 +1,30 @@
+<h1>Shop test</h1>
+<!--as the gold number updates statically to get it to update viusally you must send the player to a new passage. 
+It also lets you tell the player they don't have enough gold.-->
+
+"Hello, here is the menu," Says the fish and chip shop owner.
+
+Cone of chips: 1 gold(click:"Cone of chips")[(go-to:"Cone of chips")]
+
+Small fish and chips: 3 gold(click:"Small fish and chips")[(go-to:"Small fish and chips")]
+
+Large fish and chips: 5 gold(click:"Large fish and chips")[(go-to:"Large fish and chips")]
+
+[[Go to town?->town]]
+
+<!--Put this text into another passage titled the same as the goto. You can design the other passages with the same code,
+just change the values.-->
+<h1>Large fish and chips</h1>
+(if: $gold is >=5)[(set: $gold to $gold - 5)(set: $inv to $inv + (a: "Large fish and chips")) 
+"Here you go!" He says and hands you the large fish and chips.
+
+[[buy more->fish and chips]]
+
+[[Go to the town?->town]]]
+
+(else:)[
+"You don't have enough money." He says.
+
+[[buy more->fish and chips]]
+
+[[Go to the town?->town]]]
