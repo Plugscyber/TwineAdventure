@@ -1,0 +1,19 @@
+{(if: (passage:)'s tags contains 'donotshowhr')[<!--Do nothing-->]
+(else:)[<hr>]}
+{(if: (passage:)'s tags contains "donotshowstats")[<!--Do nothing-->]
+(else:)[
+''Health: ''(print: '<progress value="' + (text: $health) + '" max="100"></progress>')
+<br>
+''Name:'' $name
+<br>
+''Class:'' $class
+<br>
+''Location:'' $area]}
+<br>
+{(if: (passage:)'s name is "inventory")[<!--Do nothing-->]
+(else-if: (passage:)'s tags contains "donotshowinventory")[<!--Do nothing-->]
+ (else:)[''Check [[inventory]].'']}
+ 
+ {(if: (passage:)'s name is "quest")[<!--Do nothing-->]
+(else-if: (passage:)'s tags contains "donotshowquest")[<!--Do nothing-->]
+ (else:)[''Check [[quest]].'']}
