@@ -36,7 +36,8 @@ This park is a nice place to eat and test consumable items.
 
 --
 <!--make sure the passage name in the goto matches up right to the passage name of the passages you make. 
-If you want the player to be able to use up more items to add to their health, link to the last passage.-->
+If you want the player to be able to use up more items to add to their health, link to the last passage.
+add the tags donotshowinventory and donotshowquest here so the player doesn't comsume a healing item each time they check their inventory from this passage and come back to the passage-->
 <h1>Yum!</h1>
 (set: $health to $health + 5)(set: $inv to $inv - (a: "Cone of chips"))
 You eat the chips and feel better!
@@ -51,7 +52,8 @@ You want treasure do you...
 
 [Check the rusty chest?]<1a|
 
-<!--If you want to injure the player, health bars are static so to make the bar update, you have to send the player to a new passage. Remember to add the health removing code there!-->
+<!--If you want to injure the player, health bars are static so to make the bar update, you have to send the player to a new passage. Remember to add the health removing code there.-->
+
 (click:?1a)[(goto: "Ow!")]
 
 
@@ -70,5 +72,6 @@ The chest is full of broken glass! Ouch. Who even does that?
 <!--Death. 
 To make the player die if their health reaches 0.
 For this to work you need a passage called Death. You could link this back to the start of your game where you set variables to 0 to give players another chance.
-Do not put this in the footer passage, it seems tempting to make sure you don't have to add it to every passage, but Twine won't like that.-->
+Do not put this in the footer passage, it seems tempting to make sure you don't have to add it to every passage, but Twine won't like that.
+You may want to add donotshowinventory donotshowstats donotshowquest and donotshowhr as tgas to the passage-->
 (if: $health is <=1)[(go-to: "Death")]
