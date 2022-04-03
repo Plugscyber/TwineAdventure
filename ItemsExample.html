@@ -27,6 +27,11 @@ Your Grandma gives you something to use on your adventure!
 (else:)[Your Grandma has given you something to use on your adventure! As you saw when you checked your inventory]
 
 <!--Example 3: searching a room by clicking named hooks-->
+<!--Make sure either these are items you won't find multiple times on your adventure,
+or your player will be told they've searched somewhere they haven't looked!
+Alternatively reword this section to say 'you see a sword and sheild on a wepons rack but you have these items already' for the else marco. 
+That way things make sense if the player has these items or picked them up.-->
+-->
   
 <h1>Search the room</h1>
 
@@ -42,7 +47,7 @@ Your Grandma gives you something to use on your adventure!
 (if: $inv contains "bestiary")[You've searched the bookcase]
 (else:)[(click:?1b)[(set: $inv to $inv + (a: "bestiary"))You find a book on the monsters of this land.]]
 
-(if: $inv contains "sword" and "shield")[You've searched the weapons rack]
+(if: $inv contains "sword" and "shield")[You've searched the weapons rack.]
 (else:)[(click:?1c)[(set: $inv to $inv + (a: "sword","shield")) You find a good sword and shield.]]
 
 <!--
