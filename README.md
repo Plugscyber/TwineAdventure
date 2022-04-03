@@ -8,24 +8,26 @@ Please credit me and link to this github page if you use this code. Feel free to
 Working:
 
 
-Health system
+Health system.
 
 Inventory system
 
-Quest system
+Refined adding and removing items.
 
-Location information
+Quest system.
+
+Location information.
 
 Charater classes (with class dependent narrative and item acquisition.)
 
 Buying system
 
+Refined adding and removing gold.
+
 
 In development:
 
 Selling system.
-
-Making sure gold can't go below 0
 
 Cosumable items that restore health or magic.
 
