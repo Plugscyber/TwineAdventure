@@ -1,4 +1,8 @@
-<!--with the inventory system, you must be careful of adding items more than once. These examples show ways to add items avoding that.
+<!--
+ADDING ITEMS
+---
+
+with the inventory system, you must be careful of adding items more than once. These examples show ways to add items avoding that.
 They also show how to add class specfic items.-->
 
 <!--Example 1: simple way to add items to avoid duplication. You can change the passage text or leave it the same depending on what works best for your story.-->
@@ -43,11 +47,13 @@ Your Grandma gives you something to use on your adventure!
 (if: $inv contains "sword" and "shield")[You've searched the weapons rack]
 (else:)[(click:?1c)[(set: $inv to $inv + (a: "sword","shield")) You find a good sword and shield.]]
 
-<!--Example 4:Removing items-->
-<!--Removing items is a little easier than adding them. -->
+<!--
+Removing ITEMS
+---
+-->
+<!--Example 1:Removing an item-->
 <h1>Dropped it</h1>
-(if: $inv contains "sword")[
-(set: $inv to $inv - (a: "sword")) 
-Oh no you dropped your sword!]
-(else:)[You stumble but don't loose anything.]
+<h1>Dropped it</h1>
+(set: $inv to $inv - (a: "Sword")) 
+If you have a sword you just dropped it!
 
