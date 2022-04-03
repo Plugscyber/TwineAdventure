@@ -32,3 +32,11 @@ Selling items system.
 Magic system (Think this will be easy to impliment.)
 
 
+Planned projects based off this.
+
+TwineAdventureLite - a simpler version of this code with only inventory, health and gold.
+Easy to make but not when you're distracted with this project.
+
+TwineAdventureClass+ - a more complex version of the class system with statistics and class dependent health and magic values. I'll build after Twine Adventure is complete.
+
+TwineAdevntureStyles - stylesheets designed to work well with this code.
