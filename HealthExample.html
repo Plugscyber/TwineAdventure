@@ -1,6 +1,24 @@
 
 <!--Add health-->
 
+<!--Example 1: adding health
+A simpe health addtion code.-->
+<h1>Healer's house</h1>
+
+"Do you wish to be healed?" xey ask.
+
+[["Yes please!"->Heal me!]]
+
+--
+<!--make sure the passage name in the goto matches up right to the passage name of the passages you make. 
+If you want the player to be able to heal themselves again, link to the last passage. In this case we fully heal the player each time they go to the 
+Heal me! passage.-->
+<h1>Heal me!</h1>
+
+(set: $health to 100)
+You are fully healed!
+[[Go back to the healers house->Healer's house]]
+
 <!--Example 2: Consumable health items.
 I'll make this fantasy themed later. For now I'm happy the code works.-->
 
@@ -13,7 +31,7 @@ This park is a nice place to eat and test consumable items.
 
 (If: $inv contains "Large fish and chips")[Eat a ''Large fish and chips''?
 (click:"Large fish and chips")[(goto:"Yum3")]]
-
+<!--this makes it so if you don't have healing items, you can't heal-->
 (else:)[You have nothing to eat.]
 
 --
