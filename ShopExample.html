@@ -14,7 +14,8 @@ A lockpick: 3 gold(click:"lockpick")[(go-to:"lockpick")]
 [[Go to town?->town]]
 
 <!--Put this text into another passage titled the same as the goto. You can design the other passages with the same code,
-just change the values.-->
+just change the values.
+add the tags donotshowinventory and donotshowquest so the player won't end up buying additonal items if they check their inventory from this passage-->
 <h1>potion of health</h1>
 (if: $gold is >=5)[(set: $gold to $gold - 5)(set: $inv to $inv + (a: "potion of health")) 
 "Here you go!" He says and hands you the potion of health.
