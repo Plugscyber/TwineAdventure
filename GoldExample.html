@@ -1,0 +1,50 @@
+<!--Adding gold-->
+
+<!--Example 1: adding gold-->
+<h1>Gold!</h1>
+(set: $gold to $gold +5)
+You found 5 gold coins!
+
+<!--Example 2: setting the players gold to a certain ammount-->
+<h1>Gold!</h1>
+(set: $gold to 10)
+"You can only come in here if you have exactly 10 gold on you," The guard says.
+
+"That seems arbitrary," you tell her.
+
+"The guy doing this code was stuck for a better example, but I'm sure someone can think of a more creative use for it."
+
+
+<!--Example 3: the player finding gold-->
+
+<h1>Search the cave</h1>
+The cave is dark but we're not doing lighting up an area if/else item query right now.
+You want treasure do you...
+
+[Check the shiny new chest?]<1b|
+
+<!--To change the gold statistic you must go to a new passage as it is a static value.-->
+
+(click:?1b)(goto: "Gold")
+
+<!--The passage where the player gets more gold. Still working on a way to send the player back to the prior passage without them getting gold each time.
+You could simply make a new passage the player is directed to that tells them 'you don't find anymore gold in the chest'.
+You will need to tag this hideinventory and hidequest for now to stop duplicate gold addtion. Not worked out a nicer way around this yet.-->
+<h1>Gold</h1>
+{(set:$gold to $gold +5)}
+The chest is full of gold! nice.
+
+<!--Taking gold-->
+
+<!--Example 1: Remove gold if the player has over a certain ammount-->
+<h1>Lost gold</h1>
+
+(If: $gold is >=5)[(set: $gold to $gold -5)Oh no you trip and loose 5 gold!]
+(else:)[You stumble but don't loose anything]
+
+<!--Example 2: Taking all of the players gold-->
+<h1>Lost gold</h1>
+Oh no you lost all your gold! 
+
+(set: $gold to 0)
+
