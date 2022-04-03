@@ -1,0 +1,23 @@
+<!--Consumable health items.
+I'll make this fantasy themed later. For now I'm happy the code works.-->
+
+<h1>Park</h1>
+This park is a nice place to eat and test consumable items.
+
+(If: $inv contains "Cone of chips")[Eat a ''cone of chips''?(click:"cone of chips")[(goto: "Yum1")]]
+
+(If: $inv contains "Small fish and chips")[Eat a ''Small fish and chips''?(click:"Small fish and chips")[(goto:"Yum2")]]
+
+(If: $inv contains "Large fish and chips")[Eat a ''Large fish and chips''?
+(click:"Large fish and chips")[(goto:"Yum3")]]
+
+(else:)[You have nothing to eat.]
+
+--
+<!--make sure the passage name in the goto matches up right to the passage name of the passages you make. 
+If you want the player to be able to use up more items to add to their health, link to the last passage.-->
+<h1>Yum!</h1>
+(set: $health to $health + 5)(set: $inv to $inv - (a: "Cone of chips"))
+You eat the chips and feel better!
+[[eat more?->Park]]
+
