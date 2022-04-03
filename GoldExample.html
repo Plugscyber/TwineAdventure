@@ -29,14 +29,16 @@ You want treasure do you...
 
 <!--The passage where the player gets more gold. Still working on a way to send the player back to the prior passage without them getting gold each time.
 You could simply make a new passage the player is directed to that tells them 'you don't find anymore gold in the chest'.
-You will need to tag this hideinventory and hidequest for now to stop duplicate gold addtion. Not worked out a nicer way around this yet.-->
+You will need to tag this donotshowinventory and donotshowquest for now to stop duplicate gold addtion if player checks their inventory from this passage.-->
 <h1>Gold</h1>
 {(set:$gold to $gold +5)}
 The chest is full of gold! nice.
 
 <!--Taking gold-->
 
-<!--Example 1: Remove gold if the player has over a certain ammount-->
+<!--Example 1: Remove gold if the player has over a certain ammount.
+ditto like above for tags donotshowinventory and donotshowquest. 
+So the player won't keep loosing gold if they check those from this passage-->
 <h1>Lost gold</h1>
 
 (If: $gold is >=5)[(set: $gold to $gold -5)Oh no you trip and loose 5 gold!]
