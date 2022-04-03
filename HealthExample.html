@@ -66,3 +66,9 @@ However if you feel mean you can have them choose repetedly to injure themselves
 The chest is full of broken glass! Ouch. Who even does that?
 
 [[check cave again?->Cave search]] 
+
+<!--Death. 
+To make the player die if their health reaches 0.
+For this to work you need a passage called Death. You could link this back to the start of your game where you set variables to 0 to give players another chance.
+Do not put this in the footer passage, it seems tempting to make sure you don't have to add it to every passage, but Twine won't like that.-->
+(if: $health is <=1)[(go-to: "Death")]
