@@ -1,7 +1,8 @@
 tw-sidebar {
   display:none; /* Hide the undo and redo buttons and built in side bar */
 }
-/*makes that hr to seperate the inventory and stats from the main passage easily visible.*/
+/*makes that hr to seperate the inventory and stats from the main passage is easily visible.
+Style this how you want to work with your stylesheet prefrences.*/
 hr{
 border: 3px solid white;
   margin-top:5px;
