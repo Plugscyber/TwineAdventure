@@ -1,4 +1,7 @@
-<!--Consumable health items.
+
+<!--Add health-->
+
+<!--Example 2: Consumable health items.
 I'll make this fantasy themed later. For now I'm happy the code works.-->
 
 <h1>Park</h1>
@@ -21,3 +24,27 @@ If you want the player to be able to use up more items to add to their health, l
 You eat the chips and feel better!
 [[eat more?->Park]]
 
+<!--Take health-->
+
+<h1>Search the cave</h1>
+{(set:$area to "Cave")}
+The cave is dark but we're not doing lighting up an area if/else item query right now.
+You want treasure do you...
+
+[Check the rusty chest?]<1a|
+
+<!--If you want to injure the player, health bars are static so to make the bar update, you have to send the player to a new passage. Remember to add the health removing code there!-->
+(click:?1a)[(goto: "Ow!")]
+
+
+
+<!--If you don't want the player to have the option to keep injuring themselves, 
+link them to another passage in this passage instead of the previous one that says something like 'I'm not sticking my hand in there again!' ect.
+However if you feel mean you can have them choose repetedly to injure themselves without breaking the game by going back to the previous passage.-->
+
+<h1>Ow!</h1>
+<!--You will need to tag this hideinventory and hidequest for now to stop duplicate health removal. Not worked out a nicer way around this yet.-->
+{(set:$health to $health -5)}
+The chest is full of broken glass! Ouch. Who even does that?
+
+[[check cave again?->Cave search]] 
