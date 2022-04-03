@@ -1,0 +1,31 @@
+<!--Example 1: simple passage text variation-->
+
+The dragon snoozes, their hoard of books under them.
+(if: $class is "Warrior")[You want to fight them!]
+(if: $class is "Mage")[You want to read the books.]
+(if: $class is "Rouge")[You want to sneak around them.]
+[[The dragon wakes->Oh no]]
+
+<!--Example 2: class dependent outcomes-->
+
+You see a large stone before you covered in runes.
+
+(if: $class is "Mage")[You recgonise the runes as telling you to go left.]
+(else:)[You do not understand the runes.]
+
+[[Go left?->found the stone circle]]
+[[Go right?->Lost!]]
+
+
+<!--Example 3: class dependent items
+This is best for the start of the game but could be used as a way to get back game completion required items if you loose all of your items-->
+<h1>Grandma</h1>
+
+(if: $inv's length < 1)[
+Your Grandma gives you something to use on your adventure!
+
+(if: $class is "Mage")[(set: $inv to $inv + (a: "Spellbook")) (set: $gold to 10) She hands you a small ''spellbook'' and some gold coins.]
+(if: $class is "Warrior")[(set: $inv to $inv + (a: "Sword")) (set: $gold to 10)She hands you a ''sword'' and some gold coins.]
+(if: $class is "Rouge")[(set: $inv to $inv + (a: "Slingshot"))(set: $gold to 10) She hands you your ''slingshot'' and some gold coins.]]
+
+(else:)[Your Grandma has given you something to use on your adventure! As you saw when you checked your inventory]
