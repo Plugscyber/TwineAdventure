@@ -5,9 +5,9 @@ There are also example passages showing how best to use this code, or just fun t
 
 Please credit me and link to this github page if you use this code. Feel free to modify it too. And please send me a link to what you do with it! I'd love to see. :D
 
+--
 Working:
-
-
+--
 Health system.
 
 Cosumable items that restore health or magic.
@@ -24,15 +24,17 @@ Buying items system.
 
 Adding to and removing player money.
 
-
+--
 In development:
+--
 
 Selling items system.
 
 Magic system (Think this will be easy to impliment.)
 
-
-Planned projects based off this.
+--
+Planned related projects 
+--
 
 TwineAdventureLite - a simpler version of this code with only inventory, health and gold.
 Easy to make but not when you're distracted with this project.
