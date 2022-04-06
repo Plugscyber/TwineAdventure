@@ -10,4 +10,7 @@ Click the name of a quest for information.
 -->
 {(click: "Quest1")[(display: "Quest1")]}
 {(click: "Quest2")[(display: "Quest2")]}
-{[(link-goto: "Return", (history:)'s last)]}
+
+<!--this means the player can switch between the inventory and quest passages without getting stuck in a loop. 
+DO NOT have quest or inventory in any other passage names or this will break things.-->
+(link: "Return")[(goto: (history: where not ("inventory" or "quest" is in its name))'s last)]
