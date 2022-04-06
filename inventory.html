@@ -1,5 +1,5 @@
-<!--make sure to add these two tags to the passage. Otherwise the player will be stuck in an inventory quest passage loop.
-donotshowinventory and donotshowquest
+<!--make sure to add this tag to the passage so the player won't see an inventory link while on the inventory page
+donotshowinventory
 -->
 
 <h1>Inventory</h1>
@@ -10,6 +10,6 @@ donotshowinventory and donotshowquest
 you must make a passage with the same name to pull the text from. -->
 {(click: "item1")[(display: "item1")]}
 
-
-{[(link-goto: "Return", (history:)'s last)]}
-
+<!--this means the player can switch between the inventory and quest passages without getting stuck in a loop. 
+DO NOT have quest or inventory in any other passage names or this will break things.-->
+(link: "Return")[(goto: (history: where not ("inventory" or "quest" is in its name))'s last)]
