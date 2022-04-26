@@ -1,6 +1,5 @@
-<!-- Tag this passage footer to get this to work.
 
-the below code allows you to show/hide the stats, inventory link and quest link.
+<!--the below code allows you to show/hide the stats, inventory link and quest link. 
 As well as the hr element that seperates them from the main passage.-->
 {(if: (passage:)'s tags contains 'donotshowhr')[<!--Do nothing-->]
 (else:)[<hr>]}
@@ -8,15 +7,14 @@ As well as the hr element that seperates them from the main passage.-->
 (else:)[
 ''Health: ''(print: '<progress value="' + (text: $health) + '" max="100"></progress>')
 <br>
-''Magic: ''(print: '<meter value="' + (text: $magic) + '" min="0" max="100"></meter>')
+''Magic: ''(print: '<progress value="' + (text: $magic) + '" min="0" max="100"></progress>')
 <br>
-<!--reminds player of their character class-->
+''Gold: ''(print: $gold)
+<br>
 ''Class:'' $class
 <br>
-<!--tells player where they are-->
 ''Location:'' $area]}
 <br>
-<!--code for inventory and quest page links-->
 {(if: (passage:)'s name is "inventory")[<!--Do nothing-->]
 (else-if: (passage:)'s tags contains "donotshowinventory")[<!--Do nothing-->]
  (else:)[''Check [[inventory]].'']}
@@ -24,3 +22,8 @@ As well as the hr element that seperates them from the main passage.-->
  {(if: (passage:)'s name is "quest")[<!--Do nothing-->]
 (else-if: (passage:)'s tags contains "donotshowquest")[<!--Do nothing-->]
  (else:)[''Check [[quest]].'']}
+ 
+  {(if: $class is "Warrior")[<!--Do nothing-->]
+(else:)[(if: (passage:)'s name is "spellbook")[<!--Do nothing-->]
+(else-if: (passage:)'s tags contains "donotshowspellbook")[<!--Do nothing-->]
+ (else:)[''Check [[spellbook]].'']]}
