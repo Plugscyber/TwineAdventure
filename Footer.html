@@ -4,7 +4,7 @@ As well as the hr element that seperates them from the main passage.-->
 
 <!--You can remove sections individually or hide the whole footer-->
 
-(if: (passage:)'s tags contains "donotshowfooter")[<!--Do nothing-->]
+{(if: (passage:)'s tags contains "donotshowfooter")[<!--Do nothing-->]
 (else:)[
 {(if: (passage:)'s tags contains 'donotshowhr')[<!--Do nothing-->]
 (else:)[<hr>]}
@@ -31,4 +31,4 @@ As well as the hr element that seperates them from the main passage.-->
   {(if: $class is "Warrior")[<!--Do nothing-->]
 (else:)[(if: (passage:)'s name is "spellbook")[<!--Do nothing-->]
 (else-if: (passage:)'s tags contains "donotshowspellbook")[<!--Do nothing-->]
- (else:)[''Check [[spellbook]].'']]}]
+ (else:)[''Check [[spellbook]].'']]}]}
