@@ -3,7 +3,9 @@ Click the name of a spell for information.
 (if: $spells's length > 0)[Your spells are (joined:", ",...$spells).]
 (else:)[You have no spells.]
 
-{(click: "Quest1")[(display: "Quest1")]}
-{(click: "Quest2")[(display: "Quest2")]}
+<!--make passages with the display name to show their text here and explain the spell-->
+{(click: "Fireball")[(display: "fireball-spell")]}
+{(click: "Unlock")[(display: "unlock-spell")]}
+{(click: "Nightsight")[(display: "nightsight-spell")]}
 
 (link: "Return")[(goto: (history: where not ("inventory" or "quest" or "spellbook" is in its name))'s last)]
