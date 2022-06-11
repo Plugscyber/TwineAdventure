@@ -1,20 +1,18 @@
-
 <!--the below code allows you to show/hide the stats, inventory link and quest link. 
-As well as the hr element that seperates them from the main passage.
-Use 'donotshowfooter' to hide.-->
+As well as the hr element that seperates them from the main passage.-->
 {(if: (passage:)'s tags contains "donotshowfooter")[<!--Do nothing-->]
 (else:)[
 <hr>
 
-<p>''Health: ''(print: '<progress value="' + (text: $health) + '"min="0" max="100"></progress>')</p>
+<p>''Health: '' (print: '<progress value="' + (text: $health) + '"min="0" max="100"></progress>')</p>
 
-<p>''Magic: ''(print: '<progress value="' + (text: $magic) + '" min="0" max="100"></progress>')</p>
+<p>''Magic: '' (print: '<progress value="' + (text: $magic) + '" min="0" max="100"></progress>')</p>
 
-<p>''Gold: ''(print: $gold)</p>
+<p>''Gold: '' (print: $gold)</p>
 
-<p>''Class:''(print: $class)</p>
+<p>''Class:'' (print: $class)</p>
 
-<p>''Location:''(print: $area)</p>
+<p>''Location:'' (print: $area)</p>
 
 <p>{(if: (passage:)'s name is "inventory")[<!--Do nothing-->]
  (else:)[''Check [[inventory]].'']}</p>
