@@ -3,7 +3,7 @@ A repository of Twine code for a fantasy adventure game. Inculdes an inventory s
 There are also example passages showing how best to use this code, or just fun things you could do with a Harlowe Twine game that works with my system.
 
 
-Please credit me and link to this github page if you use this code. Feel free to modify it too. And please send me a link to what you do with it! I'd love to see. :D
+Please credit me and link to this github page if you use this or modify it. And please link me to what you create!
 
 --
 Working:
